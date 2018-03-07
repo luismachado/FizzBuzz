@@ -20,9 +20,9 @@ class Brain {
         } else if isDivisibleBy(divisor: 3, number: number) {
             return "Fizz"
         } else if isDivisibleBy(divisor: 5, number: number) {
-            return "Buzz"
+            return "Buzze"
         }
-        
+
 
         return "\(number)"
     }
