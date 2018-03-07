@@ -2,9 +2,9 @@ language: objective-c  #1
 osx_image: xcode9.2 #2
 
 
-#script:
-    #- xcodebuild clean test -project FizzBuzz.xcodeproj -scheme FizzBuzz -destination "platform=iOS Simulator,name=iPhone 8,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES -quiet
--script: 
-  - xctool -project FizzBuzz.xcodeproj -scheme FizzBuzz build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+script:
+  - xcodebuild clean test -project FizzBuzz.xcodeproj -scheme FizzBuzz -destination "platform=iOS Simulator,name=iPhone 8,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage=YES -quiet
+##-script: 
+##  - xctool -project FizzBuzz.xcodeproj -scheme FizzBuzz build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t :5af91e04-8818-4934-975f-50047cff4373
