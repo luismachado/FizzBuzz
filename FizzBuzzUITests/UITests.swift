@@ -23,6 +23,4 @@ class UITests: XCTestCase {
 
     func testExample() {
     }
-
-    
 }
