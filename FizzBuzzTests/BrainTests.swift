@@ -12,11 +12,11 @@ import XCTest
 class BrainTests: XCTestCase {
 
     let brain = Brain()
-    
+
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
@@ -70,5 +70,4 @@ class BrainTests: XCTestCase {
         let result = brain.check(number: 1)
         XCTAssertEqual(result, "1")
     }
-    
 }
