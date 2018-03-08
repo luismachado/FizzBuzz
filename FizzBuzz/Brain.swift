@@ -23,7 +23,6 @@ class Brain {
             return "Buzz"
         }
 
-
         return "\(number)"
     }
 
