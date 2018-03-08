@@ -5,8 +5,7 @@ install:
   - gem install xcpretty
 
 script:
-  - xcodebuild clean test  -project FizzBuzz.xcodeproj -scheme FizzBuzz -destination "platform=iOS Simulator,name=iPhone 8,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES | xcpretty -c && exit ${PIPESTATUS[0]}
-script:
+  - xcodebuild clean test  -project FizzBuzz.xcodeproj -scheme FizzBuzz -destination "platform=iOS Simulator,name=iPhone 8,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES | xcpretty -c
   - swiftlint --strict
 ##-script: 
 ##  - xctool -project FizzBuzz.xcodeproj -scheme FizzBuzz build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
