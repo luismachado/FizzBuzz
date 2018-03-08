@@ -22,7 +22,7 @@ class Brain {
         } else if isDivisibleBy(divisor: 5, number: number) {
             return "Buzz"
         }
-        
+
 
         return "\(number)"
     }
