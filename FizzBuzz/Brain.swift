@@ -25,5 +25,4 @@ class Brain {
 
         return .number
     }
-
 }
