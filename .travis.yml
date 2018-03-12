@@ -2,6 +2,7 @@ language: objective-c  #1
 osx_image: xcode9.2 #2
 
 install:
+  - pod install
   - gem install xcpretty
 
 jobs:
