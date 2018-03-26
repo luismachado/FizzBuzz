@@ -14,6 +14,7 @@ class ViewControllerUnitTestsNimble: QuickSpec {
 
     var viewController: ViewController!
 
+    // swiftlint:disable:next function_body_length
     override func spec() {
         describe("View Controller Tests") {
 
